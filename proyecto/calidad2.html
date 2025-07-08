@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/hogar.png">
+    <title>SECADOR registro de valores</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+     <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+        }
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function() {
+         $("#includeHtml").load("enca1.html");
+      });
+    </script>
+    
+</head>
+<body>
+
+ <div id="includeHtml"></div>
+ 
+<div class="container ">
+    <div class="row gx-3 gy-2 align-items-center mb-1 mt-1 text-bg-warning p-3">
+      <div class="col-sm-3">
+        <label  for="OF">ORDEN FABRICACION</label><br>
+        <label class="text-dark bg-primary-subtle" for="OF">18000498</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="CODIGO">CODIGO</label><br>
+        <label class="text-dark bg-primary-subtle" for="CODIGO">F0003</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="DESCRIPCION">DESCRIPCION DE LA RECETA</label><br>
+        <label class="text-dark bg-primary-subtle" for="DESCRIPCION">RECETA DE CERDOS CON MAIZ 70%</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="lote">NUM LOTE</label><br>
+        <label class="text-dark bg-primary-subtle" for="OF">C0118252025</label>
+      </div>
+    </div>
+
+    <div class="row gx-3 gy-2 align-items-center mb-1 mt-1 text-bg-warning p-3">
+      <div class="col-sm-3">
+        <label  for="OF">RESPONSABLE</label><br>
+        <label class="text-dark bg-primary-subtle" for="OF">JOSE MANUAL HERNANADEZ</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="CODIGO">LINEA</label><br>
+        <label class="text-dark bg-primary-subtle" for="CODIGO">1</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="DESCRIPCION">TURNO</label><br>
+        <label class="text-dark bg-primary-subtle" for="DESCRIPCION">1</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="lote">GRUPO</label><br>
+        <label class="text-dark bg-primary-subtle" for="OF">C</label>
+      </div>
+    </div>
+
+     <div class="row gx-3 gy-2 align-items-center mb-1 mt-1 text-bg-warning p-3">
+      <div class="col-sm-3">
+        <label  for="FECHAINI">FECHA INICIO</label><br>
+        <label class="text-dark bg-primary-subtle" for="FECHAINI">01/06/2025</label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="FECHAFIN">FECHA FINAL</label><br>
+        <label class="text-dark bg-primary-subtle" for="FECHAFIN"> / /  </label>
+      </div>
+      <div class="col-sm-3">
+        <label  for="OF">RESPON. CALIDAD</label><br>
+        <label class="text-dark bg-primary-subtle" for="OF">JOSEFINA HERNANADEZ</label>
+      </div>
+     </div>
+</div>
+
+<div class="container ">
+   <div class="row gx-3 gy-2 align-items-center mb-1 mt-1 text-bg-primary p-3">
+   <div class="col-sm-4">
+        <label  for="name">Proceso</label>
+        <label  class="form-control" for="name">Secado</label>
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">Densidad</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0.000">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <label  for="Selecciona">% Humedad</label>
+        <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0.000">
+      </div>
+   </div>
+
+   <div class="row gx-3 gy-2 align-items-center text-bg-primary p-3">
+      <div class="col-sm-4">
+        <label  for="name">Quemador 1</label>
+        <input type="text" class="form-control" id="specificSizeInputName" placeholder="0 c">
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">Quemador 2</label>
+        <div class="input-group">  
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0 c">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">Quemador 3</label>
+        <div class="input-group">  
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0 c">
+        </div>
+      </div>
+   </div>
+
+  <div class="row gx-3 gy-2 align-items-center text-bg-primary p-3">
+      <div class="col-sm-4">
+        <label  for="name">Quemador 4</label>
+        <input type="text" class="form-control" id="specificSizeInputName" placeholder="0 c">
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">Tiempo Retencion Superior</label>
+        <div class="input-group">  
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0.00">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">Tiempo Retencion Inferior</label>
+        <div class="input-group">  
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0.00">
+        </div>
+      </div>
+   </div>
+  <div class="row gx-3 gy-2 align-items-center text-bg-primary p-3">
+      <div class="col-sm-4">
+        <label  for="name">Temperatura ambiente</label>
+        <input type="text" class="form-control" id="specificSizeInputName" placeholder="0 c">
+      </div>
+      <div class="col-sm-4">
+        <label  for="Username">% Humedad relativa ambiental</label>
+        <div class="input-group">  
+          <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="0.00">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <label  for="name">Observaciones</label>
+        <textarea type="textarea" class="form-control" id="specificSizeInputName"  placeholder="ingresa Observaciones"></textarea>
+      </div>
+   </div>
+
+<div class="row gx-3 gy-2 align-items-center text-bg-primary p-3">
+      <div class="col-sm-4">
+        <label  for="name">PD</label>
+        <label  class="form-control" for="name">% 0</label>
+      </div>
+      <div class="col-sm-4">
+        <label  for="name">RFTD</label>
+        <label  class="form-control" for="name">% 0</label>
+      </div>
+      <div class="col-sm-4">
+        <label  for="name">RFTH</label>
+        <label  class="form-control" for="name">% 0</label>
+      </div>
+   </div>
+
+   <div class="row gx-3 gy-2  text-bg-primary p-2">
+    <div class="col-sm-4  justify-content-start" >
+    </div>
+    <div class="col-sm-4  justify-content-start" >
+    </div>
+      <div class="col-sm-4  border-primary-subtle" >
+        <label  for="name">RFT TOT</label>
+        <label  class="form-control" for="name">% 0</label>
+      </div>
+      
+   </div>
+
+</div>
+
+</body>
+</html>

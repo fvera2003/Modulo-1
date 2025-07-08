@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cosmo/bootstrap.min.css" integrity="sha512-PU+mnI7iaSDt/G/adHVcQOX2I+K3bQ27kwHJQ1rPq5iqQvHuHSdJOUU/TmPcUsyUGrfAxK+Z4rnx/SL+qCmBNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form >
+        <label class="label label-danger">dame tu direccion</label>
+        <button class ="btn btn-outline-success" onclick="saludo('frank')">boton alert</button>
+         <button class ="btn btn-warning" onclick="alert(preguntar())">Preguntar nombre</button>
+    </form>
+    <script>
+        var dato ="Hola mundo";
+        console.log(dato);
+       
+        function saludo(nombre){
+            alert("funcion " +nombre);
+        }
+
+        function preguntar(){
+            let nombre = prompt("Dame tu nombre")
+            return nombre
+        }
+        console.log("el valor 2*1", 2*1)
+
+        var n = 0
+        while(n<10){
+            if (n==5){
+                console.log("n=",n)
+            }
+            n++;
+        }
+        let frutas =['manzana','pera'];
+        frutas.push("pina");
+        console.log(frutas);
+
+        const arr = [1, 2, 3];
+        const isArray = arr instanceof Array;
+        console.log(isArray);
+
+        const Array1 = [1,2,3,4,5,6,7]
+        const resultArray = Array1.map(Element => Element+20)
+
+        console.log(resultArray)
+
+        const array3 = [5, 2, 3];
+const array4 = [1, 2, 3];
+
+const arraysAreEqual = array3.length === array4.length && array3.every((value, index) => value === array4[index]);
+
+console.log(arraysAreEqual);  // Output: true
+
+const array1 = [1, 2, 3, 4];
+const array2 = [2, 3, 5];
+
+const difference1 = array1.filter(x => !array2.includes(x));
+const difference2 = array2.filter(x => !array1.includes(x));
+
+console.log(difference1); // Output: [1, 4]
+console.log(difference2); // Output: [5]
+    </script>
+</body>
+</html>

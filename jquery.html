@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practiva con jquery
+    </title>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cosmo/bootstrap.min.css" integrity="sha512-PU+mnI7iaSDt/G/adHVcQOX2I+K3bQ27kwHJQ1rPq5iqQvHuHSdJOUU/TmPcUsyUGrfAxK+Z4rnx/SL+qCmBNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-3">
+            <h3>PRactica con Jquerey</h3>
+            <p>Esta es la funcionalidad de Jquery</p>
+        </div>
+        <form id="formulario">
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="nombre" class="control">nombre </label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="edad" class="control">edad </label>
+                    <input type="number" class="form-control" id="edad" name="edad">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="fecha_nacimiento" class="control">fecha de nacimiento </label>
+                    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+            </div>
+            <div class="row ms-3">
+                <div class="col-6">
+                    <button class="btn btn-success" id="boton1" >Saludar</button>
+                    <button class="btn btn-primary" id="boton2">Cambiar a fondo negro</button>
+                    <button class="btn btn-warning" id="boton3">Boton 3</button>
+                    <a class="btn btn-danger" href="https:wwww.cnn.com" target="_blank">Boton 4</a>
+                    <button class="btn btn-success" id="boton5">Cargar</button>
+                </div>
+            </div>
+            <div id="tablita">
+                <!--El contenido de este elemento lo va a traer jQuery con Ajas-->
+
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        // aqui va mi codigo javascript
+        //dentro de esta funcion es como el LOAD y sirve para escuchar eventos
+        $(function(){
+            $("#formulario").submit(function(e){
+                e.preventDefault();
+            })
+            $("#boton2").click(function(){
+                cambiar_color()
+            })
+            $("#boton1").click(function(){
+                alert("saludo desde boton1");
+            })
+            
+            $("#boton3").click(function(){
+                win<dow.open("https://www.google.com", "_blank")
+            })
+            
+            $("#boton5").click(function(){
+                cargar();
+            })
+        })
+        function cargar(){
+            $.ajax({
+                url:'datos.json',
+                type: 'GET',
+                beforeSend: function(){},
+                success: function(data){
+                    var tabla = '<table class="table table-striped"><tr><th>NOMBRE</th><th>EDAD</th><th>CIUDAD</th></tr>'
+                        $.each(data,function(i,persona){
+                            tabla +='<tr><td>' + persona.nombre + '</td><td>' + persona.edad + '</td><td>' + persona.ciudad + '</td></tr>';
+                        })
+                        tabla += '</table>';
+                        $("#tablita").html(tabla)
+                }
+            })
+        }
+
+        function cambiar_color(){
+            $(".row").css("background-color","black");
+        }
+        function saludo(){
+            let miNombre = $("#nomre").val();
+            alert("hola "+ miNombre + " como estas")
+        }
+        function saludo4(){
+            alert("saludo al cargar la pagina")
+        }
+    </script>
+</body>
+</html>
